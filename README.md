@@ -63,42 +63,61 @@ reflected_image = cv2.flip(image_rgb, 1)  # Horizontal reflection (flip along y-
 M_rotate = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)  # Rotate by 45 degrees
 rotated_image = cv2.warpAffine(image_rgb, M_rotate, (cols, rows))
 
-# 6. Cropping
+# 6.Cropping
 cropped_image = image_rgb[50:300, 100:400]  # Crop a portion of the image
 
 # Plot the original and transformed images
 plt.figure(figsize=(12, 8))
-
-plt.subplot(2, 3, 1)
+```
+```
 plt.imshow(image_rgb)
 plt.title("Original Image")
 plt.axis('off')
-
-plt.subplot(2, 3, 2)
+```
+# Output:
+![4(7)](https://github.com/user-attachments/assets/d43d12b1-f6c1-4539-9e3b-2a0b4803560e)
+# 1. Translation
+```
 plt.imshow(translated_image)
 plt.title("Translated Image")
 plt.axis('off')
-
-plt.subplot(2, 3, 3)
+```
+### Output:
+![4(1)](https://github.com/user-attachments/assets/8950440f-6641-45ef-8795-311b16c96ade)
+# 2. Scaling
+```
 plt.imshow(scaled_image)
 plt.title("Scaled Image")
 plt.axis('off')
-
-plt.subplot(2, 3, 4)
+```
+### Output:
+![4(2)](https://github.com/user-attachments/assets/4f093ce8-6035-4e75-95d7-09d01e84bd09)
+# 3. Shearing
+```
 plt.imshow(sheared_image)
 plt.title("Sheared Image")
 plt.axis('off')
-
-plt.subplot(2, 3, 5)
+```
+### Output:
+![4(3)](https://github.com/user-attachments/assets/7280ec4d-30f1-4f8b-bd54-6052e26bd5ce)
+# 4. Reflection (Flip)
+```
 plt.imshow(reflected_image)
 plt.title("Reflected Image")
 plt.axis('off')
-
-plt.subplot(2, 3, 6)
+```
+### Output:
+![4(4)](https://github.com/user-attachments/assets/d6cd14c6-922d-4173-a5e0-574a5311770c)
+# 5. Rotation
+```
 plt.imshow(rotated_image)
 plt.title("Rotated Image")
 plt.axis('off')
-
+```
+### Output:
+![4(5)](https://github.com/user-attachments/assets/43bdafba-d400-413d-8cd3-f2da70d79e54)
+# 6.Cropping
+```
 plt.tight_layout()
 plt.show()
 
@@ -108,10 +127,9 @@ plt.imshow(cropped_image)
 plt.title("Cropped Image")
 plt.axis('off')
 plt.show()
-
 ```
-## Output:
-![ex 4](https://github.com/user-attachments/assets/68a3ef7e-281a-47ec-b904-2809648b120a)
+### Output:
+![4(6)](https://github.com/user-attachments/assets/cd85b5d6-1919-466c-979e-6d461dca057c)
 
 ## Result: 
 
